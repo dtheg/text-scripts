@@ -20,11 +20,17 @@ def divide_chunks(l, n):
 n = 3
 
 bros_chunked = list(divide_chunks(bros, n))
-random.shuffle(bros_chunked)
+
+# for i in range(len(bros_chunked)):
+# 	for x in bros_chunked:
+#         print(x[i], end =' ')
+
+
+bros_shuffled = random.choice(bros_chunked)
 
 # def assign():
 
-df['Name'] = [bros_chunked for Name in df.Name]
+df['Name'] = [bros_shuffled for Name in df.Name]
 # assign()
 
 
